@@ -20,7 +20,7 @@ To get a local copy up and running follw these simple example steps:
     - Clone the repo with git clone using the link below
     - git clone https://github.com/ogiogiovictor/todo_list
     - $ Once the report has been cloned change the project directory by cd into the directory
-    - $ cd into the awesome_book from your teminal.
+    - $ cd into the todo list from your teminal.
 ```
 Important: Once you have downloaded the code, run npm install, to install all dependencies of the project for it to work properly.
 
