@@ -4,22 +4,21 @@ import '@fortawesome/fontawesome-free/js/fontawesome.js';
 import '@fortawesome/fontawesome-free/js/solid.js';
 import '@fortawesome/fontawesome-free/js/regular.js';
 import '@fortawesome/fontawesome-free/js/brands.js';
+import getTodos from './modules/get_todo.js';
 
-function component() {
 
-    const element = document.createElement('div');
-    const btn = document.createElement('button');
- 
-   // Lodash, currently included via a script, is required for this line to work
-   // Lodash, now imported by this script
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+const todoElement = document.querySelector('.todoList');
 
-    btn.innerHTML = 'Click me and check the console!';
-    btn.onclick = printMe;
-  
-    element.appendChild(btn);
- 
-    return element;
+const todos = getTodos.sortArray(getTodos.allTodos());
+
+// This is the part that loads the objects
+function init() {
+  if (todos.length === 0) {
+    todoElement.innerHTML = '';
+  } else {
+    todos.forEach((td) => getTodos.displayTodos(td, todoElement));
   }
- 
-  document.body.appendChild(component());
+}
+
+console.log(todos)
+document.addEventListener('DOMContentLoaded', init);

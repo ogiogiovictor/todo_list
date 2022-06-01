@@ -10,31 +10,40 @@
     <div class="wrapper">
 
         <header>
-            <div class="title">
-              Today's To Do <span onclick=""><i class="fas fa-sync"></i></span>
-            </div>
+              <span class="todo-title">Today's To Do</span> 
+              <span onclick="" class="push-trash"><i class="fas fa-sync"></i></span>
+           
           </header>
-    
+          
           <section>
-            <input type="text" placeholder="Add to your list..." required/>
+            <div class="inputField">
+                <input type="text" class="todo-input" placeholder="Add to your list" />
+                <button type="button" class="todo-button">
+                  <i class="fas fa-long-arrow-alt-left"></i>
+                </button>
+            </div>
          </section>
     
     
         <section>
-            <ul>
-                <li>
+            <ul class="todoList" id="list">
+                <!--<li>
                     <input type="checkbox" name="check"/>
                     Wash the disk
-                    <span>...</span>
+                    <span class="push-trash"><i class="fas fa-trash-alt"></i>'</span>
                 </li>
                 <li>
                     <input type="checkbox" name="check"/>
                     Completed To List
-                    <span>...</span>
-                </li>
+                    <span class="push-trash"><i class="fas fa-trash-alt"></i></span>
+                </li>-->
             </ul>
+
+            <footer>
+                <button type="button" id="clear">Clear all completed</button>
+              </footer>
         </section>
-        
+
     </div>
    
 </body>
