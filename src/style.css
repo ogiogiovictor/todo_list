@@ -3,7 +3,7 @@
 :root {
   --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   --bgbrown: #f5f5f5;
-  --bgwhite: #ffffff;
+  --bgwhite: #fff;
   --bgrey: grey;
 }
 
@@ -14,7 +14,7 @@
   font-family: 'Poppins', sans-serif;
 }
 
-body{
+body {
   background-color: var(--bgbrown);
   display: flex;
   flex-direction: column;
@@ -22,7 +22,7 @@ body{
   justify-content: center;
 }
 
-.wrapper{
+.wrapper {
   border: 1px solid var(--bgrey);
   border-radius: 5px;
   max-width: 500px;
@@ -30,12 +30,21 @@ body{
   padding: 20px;
   box-shadow: var(--box-shadow);
   background-color: var(--bgwhite);
-  margin-top: 150px;
+  margin-top: 120px;
 }
 
-header{
+header {
   padding: 10px;
   border-bottom: 1px solid var(--bgrey);
+}
+
+footer button {
+  border: none;
+  background: transparent;
+  color: #7d7b7d;
+  align-self: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .inputField {
@@ -67,9 +76,10 @@ header{
   transition: all 0.3s ease;
 }
 
-.todo-title{
+.todo-title {
   font-weight: bold;
 }
+
 .todoList li {
   list-style: none;
   height: 45px;
@@ -80,10 +90,10 @@ header{
 }
 
 .todoList input[type='checkbox'] {
-  margin-right:10px;
+  margin-right: 10px;
 }
 
-.push-trash{
+.push-trash {
   float: right;
   color: var(--bgrey);
   font-size: 10px;
@@ -97,18 +107,4 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-footer button {
-  border: none;
-  background: transparent;
-  color: #7d7b7d;
-  align-self: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-section {
-  
-  
 }
