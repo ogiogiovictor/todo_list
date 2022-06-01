@@ -24,6 +24,10 @@ To get a local copy up and running follw these simple example steps:
 ```
 Important: Once you have downloaded the code, run npm install, to install all dependencies of the project for it to work properly.
 
+# Website URL - Github Pages
+The Webpage is now deployed using github pages. See url link below:
+[live demo]( https://ogiogiovictor.github.io/todo_list/dist/)
+
 
 ## Authors
 👤 **Ogiogio Victor**
