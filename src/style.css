@@ -5,6 +5,9 @@
   --bgbrown: #f5f5f5;
   --bgwhite: #fff;
   --bgrey: grey;
+  --color-primary-rgb: 255, 99, 71;
+  --color-primary: tomato;
+  --opacity: 0.33;
 }
 
 * {
@@ -47,14 +50,6 @@ footer button {
   transition: all 0.3s ease;
 }
 
-.inputField {
-  display: flex;
-  height: 55px;
-  width: 100%;
-  padding: 10px;
-  border-bottom: 2px solid #edebed;
-}
-
 .inputField input {
   width: 100%;
   height: 100%;
@@ -74,6 +69,14 @@ footer button {
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
+}
+
+.inputField {
+  display: flex;
+  height: 55px;
+  width: 100%;
+  padding: 10px;
+  border-bottom: 2px solid #edebed;
 }
 
 .todo-title {
@@ -107,4 +110,50 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.fa-trash-alt,
+.fa-check {
+  pointer-events: none;
+}
+
+.grey-light {
+  color: var(--bgrey);
+}
+
+.desc-input {
+  width: 70%;
+  padding: 5px;
+  border: none;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.desc-input:focus {
+  outline: none;
+}
+
+/* input:focus {
+  background-color: rgba(var(--color-primary-rgb), 0.075);
+  transition: 0.5s;
+} */
+
+.icon-disabled {
+  opacity: var(--opacity);
+}
+
+.icon-activated {
+  color: var(--color-primary);
+  opacity: 1;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
 }
