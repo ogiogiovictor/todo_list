@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+</head>
+<body>
+
+    <div class="wrapper">
+
+        <header>
+              <span class="todo-title">Today's To Do</span> 
+              <span onclick="" class="push-trash"><i class="fas fa-sync"></i></span>
+           
+          </header>
+          
+          <section>
+            <div class="inputField">
+                <input type="text" class="todo-input" autocomplete="off"
+                required placeholder="Add to your list" />
+                <button type="button" class="todo-button">
+                  <i class="fas fa-long-arrow-alt-left"></i>
+                </button>
+            </div>
+         </section>
+    
+    
+        <section>
+            <ul class="todoList" id="list">
+                <!--<li>
+                    <input type="checkbox" name="check"/>
+                    Wash the disk
+                    <span class="push-trash"><i class="fas fa-trash-alt"></i>'</span>
+                </li>
+                <li>
+                    <input type="checkbox" name="check"/>
+                    Completed To List
+                    <span class="push-trash"><i class="fas fa-trash-alt"></i></span>
+                </li>-->
+            </ul>
+
+            <footer>
+                <button type="button" id="clear">Clear all completed</button>
+              </footer>
+        </section>
+
+    </div>
+   
+</body>
+</html>
