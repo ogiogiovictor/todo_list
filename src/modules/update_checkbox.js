@@ -17,7 +17,7 @@ class updateCheckbox {
         return todo;
       });
 
-      const todoElement = document.querySelector('.todoList');
+      // const todoElement = document.querySelector('.todoList');
       addTodo.storeTodo(JSON.stringify(todos));
       window.location.reload();
     }

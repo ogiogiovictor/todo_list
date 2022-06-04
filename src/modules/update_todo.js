@@ -37,11 +37,9 @@ class updateTodo {
     }
 
     // Old Reset
-    static refreshTaskList = () => {
-      this.deleteAllMarked.map((e, i) => {
-        e.index = i + 1;
-        return e;
-      });
+    static refreshId = (tasks) => {
+      for (let i = 0; i < tasks.length; i += 1) tasks[i].index = i;
+      return tasks;
     }
 }
 

@@ -4,7 +4,7 @@ const todoElement = document.querySelector('.todoList');
 
 class addTodo {
   constructor(index, description, completed = false) {
-    this.index = index,
+    this.index = index + 1,
     this.description = description,
     this.completed = completed;
   }

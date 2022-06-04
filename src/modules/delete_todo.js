@@ -1,6 +1,6 @@
 import getTodos from './get_todo.js';
 import addTodo from './add_todo.js';
-import updateTodo from './update_todo.js';
+// import updateTodo from './update_todo.js';
 
 // const todoElement = document.querySelector('.todoList');
 
@@ -14,7 +14,6 @@ class deleteTodo {
     static removeFromLocalStorage = (index) => {
       const todos = getTodos.allTodos();
       const newTodo = todos.filter((td) => td.index !== Number(index));
-      // console.log(newTodo);
       // updateTodo.refreshId(newTodo);
       addTodo.storeTodo(JSON.stringify(newTodo));
     }
