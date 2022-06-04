@@ -1,5 +1,5 @@
 import getTodos from './get_todo.js';
-import addTodo from './add_todo.js';
+import AddTodo from './add_todo.js';
 
 class updateCheckbox {
     static changeStatus = (todotaks, id) => {
@@ -18,7 +18,7 @@ class updateCheckbox {
       });
 
       // const todoElement = document.querySelector('.todoList');
-      addTodo.storeTodo(JSON.stringify(todos));
+      AddTodo.storeTodo(JSON.stringify(todos));
       window.location.reload();
     }
 }

@@ -5,7 +5,7 @@ import '@fortawesome/fontawesome-free/js/solid.js';
 import '@fortawesome/fontawesome-free/js/regular.js';
 import '@fortawesome/fontawesome-free/js/brands.js';
 import getTodos from './modules/get_todo.js';
-import addTodo from './modules/add_todo.js';
+import AddTodo from './modules/add_todo.js';
 import deleteTodo from './modules/delete_todo.js';
 import updateTodo from './modules/update_todo.js';
 import updateCheckbox from './modules/update_checkbox.js';
@@ -21,7 +21,6 @@ const todos = getTodos.allTodos();
 function init() {
   if (todos.length === 0) {
     todoElement.innerHTML = '';
-    // todoElement.innerHTML = 'No todo added yet..';
   } else {
     todos.forEach((td) => getTodos.displayTodos(td, todoElement));
   }
@@ -43,10 +42,10 @@ todoElement.addEventListener('change', (e) => {
     updateTodo.changeDesc(getID.value, id);
   } else if (getID.classList[0] === 'my-checkbox') {
     if (getID.nextElementSibling.classList.contains('completed')) {
-      console.log(getID.nextElementSibling);
+      // console.log(getID.nextElementSibling);
       getID.nextElementSibling.classList.remove('completed');
     } else {
-      console.log(getID.nextElementSibling);
+      // console.log(getID.nextElementSibling);
       getID.nextElementSibling.classList.add('completed');
     }
     const id = getID.getAttribute('data-id');
@@ -58,7 +57,7 @@ clearAll.addEventListener('click', () => updateTodo.deleteAllMarked());
 
 inputElement.addEventListener('change', (e) => {
   e.preventDefault();
-  addTodo.pushtoUI(inputElement.value, 'false');
+  AddTodo.pushtoUI(inputElement.value, 'false');
   inputElement.value = '';
   inputElement.focus();
 });
