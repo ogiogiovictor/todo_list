@@ -2,10 +2,10 @@ import getTodos from './get_todo.js';
 
 const todoElement = document.querySelector('.todoList');
 
-class addTodo {
+class AddTodo {
   constructor(index, description, completed = false) {
-    this.index = index,
-    this.description = description,
+    this.index = index + 1;
+    this.description = description;
     this.completed = completed;
   }
 
@@ -16,15 +16,15 @@ class addTodo {
     static todaArray = getTodos.allTodos();
 
     static addToArray = (description, completed) => {
-      const todo = new addTodo(this.todaArray.length, description, completed);
+      const todo = new AddTodo(this.todaArray.length, description, completed);
       this.todaArray.push(todo);
       this.storeTodo(JSON.stringify(this.todaArray));
       getTodos.displayTodos(todo, todoElement);
     }
 
     static pushtoUI = (inputValue, completed) => {
-      const todoArray = this.addToArray(inputValue, completed);
+      this.addToArray(inputValue, completed);
     }
 }
 
-export default addTodo;
+export default AddTodo;

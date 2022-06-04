@@ -16,13 +16,12 @@ class getTodos {
      const item = document.createElement('li');
      let changeState;
      let checkState;
-     if (todo.completed == true) {
+     if (todo.completed === true) {
        changeState = `<input type="text" class="desc-input completed" id="desc-input" data-id="${todo.index}" name="description" value="${todo.description}" />`;
        checkState = `<input checked type="checkbox" name="check" class="my-checkbox" data-id="${todo.index}"/>`;
      } else {
        changeState = `<input type="text" class="desc-input" id="desc-input" data-id="${todo.index}" name="description" value="${todo.description}" />`;
        checkState = `<input type="checkbox" name="check" class="my-checkbox" data-id="${todo.index}"/>`;
-       // changeState = `<span class="completed">${todo.description}</span>`;
      }
      item.innerHTML = `
           ${checkState}
