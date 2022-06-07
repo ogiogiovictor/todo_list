@@ -9,6 +9,7 @@ import AddTodo from './modules/add_todo.js';
 import deleteTodo from './modules/delete_todo.js';
 import updateTodo from './modules/update_todo.js';
 import updateCheckbox from './modules/update_checkbox.js';
+import dragDrop  from './modules/drag_drop.js';
 
 const todoElement = document.querySelector('.todoList');
 const inputElement = document.querySelector('.todo-input');
@@ -16,6 +17,11 @@ const removeBtn = document.querySelector('#list');
 const clearAll = document.querySelector('#clear');
 
 const todos = getTodos.allTodos();
+
+//Date implementation
+const d = new Date();
+const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const showDate = `${months[d.getMonth()]} ${d.getDate()}`;
 
 // This is the part that loads the objects
 function init() {
@@ -57,7 +63,11 @@ clearAll.addEventListener('click', () => updateTodo.deleteAllMarked());
 
 inputElement.addEventListener('change', (e) => {
   e.preventDefault();
+  let desc = inputElement.value.charAt(0).toUpperCase() + inputElement.value.slice(1).toLowerCase();
   AddTodo.pushtoUI(inputElement.value, 'false');
   inputElement.value = '';
   inputElement.focus();
 });
+
+
+document.getElementById('showDate').innerHTML = showDate;

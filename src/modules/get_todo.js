@@ -1,6 +1,7 @@
 import defaultTodos from './default_todo.js';
 
 class getTodos {
+
    static allTodos = () => {
      let todos = JSON.parse(localStorage.getItem('todos'));
 
@@ -14,6 +15,7 @@ class getTodos {
 
    static displayTodos(todo, el) {
      const item = document.createElement('li');
+     item.setAttribute('draggable', 'true');
      let changeState;
      let checkState;
      if (todo.completed === true) {
