@@ -16,6 +16,7 @@ const inputElement = document.querySelector('.todo-input');
 const removeBtn = document.querySelector('#list');
 const clearAll = document.querySelector('#clear');
 
+
 const todos = getTodos.allTodos();
 
 //Date implementation
@@ -69,5 +70,22 @@ inputElement.addEventListener('change', (e) => {
   inputElement.focus();
 });
 
-
+//Implementing the date show 
 document.getElementById('showDate').innerHTML = showDate;
+
+  //Drag and drop events
+
+
+document.addEventListener('DOMContentLoaded', (event) => {
+
+let dragLits = document.querySelectorAll('.todoList li');
+
+dragLits.forEach(function (item) {
+  item.addEventListener('dragstart', dragDrop.handleDragStart);
+  item.addEventListener('dragover', dragDrop.handleDragOver);
+  item.addEventListener('drop', dragDrop.handleDragDrop);
+  item.addEventListener('dragenter', dragDrop.handleDragEnter);
+  item.addEventListener('dragleave', dragDrop.handleDragLeave);
+})
+
+});

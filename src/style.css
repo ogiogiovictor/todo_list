@@ -161,3 +161,7 @@ footer {
 .todoList:hover {
   cursor: move;
 }
+
+.todoList li.over .list-item {
+  background-color: #7d7b7d;
+}

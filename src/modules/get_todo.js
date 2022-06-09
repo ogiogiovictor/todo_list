@@ -16,6 +16,8 @@ class getTodos {
    static displayTodos(todo, el) {
      const item = document.createElement('li');
      item.setAttribute('draggable', 'true');
+     item.classList.add('list-item');
+     item.setAttribute('datali-id', `${todo.index}`);
      let changeState;
      let checkState;
      if (todo.completed === true) {
@@ -30,6 +32,7 @@ class getTodos {
           ${changeState}
           <span class="push-trash"><button class="btn" data-id="${todo.index}"><i class="fas fa-trash-alt grey-light"></i></button>
           </span>
+         
         `;
      el.appendChild(item);
    }
