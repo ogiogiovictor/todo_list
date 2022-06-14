@@ -49,10 +49,8 @@ todoElement.addEventListener('change', (e) => {
     updateTodo.changeDesc(getID.value, id);
   } else if (getID.classList[0] === 'my-checkbox') {
     if (getID.nextElementSibling.classList.contains('completed')) {
-      // console.log(getID.nextElementSibling);
       getID.nextElementSibling.classList.remove('completed');
     } else {
-      // console.log(getID.nextElementSibling);
       getID.nextElementSibling.classList.add('completed');
     }
     const id = getID.getAttribute('data-id');
@@ -74,8 +72,6 @@ inputElement.addEventListener('change', (e) => {
 document.getElementById('showDate').innerHTML = showDate;
 
   //Drag and drop events
-
-
 document.addEventListener('DOMContentLoaded', (event) => {
 
 let dragLits = document.querySelectorAll('.todoList li');
