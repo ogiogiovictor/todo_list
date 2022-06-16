@@ -17,8 +17,7 @@ const addTestTodo = (input) => {
   localStorage.setItem('todos', JSON.stringify(todos));
   input.value = '';
   todoList.innerHTML = '';
-  getTodos.allTodos()
-
+  getTodos.allTodos();
 };
 
 export default addTestTodo;

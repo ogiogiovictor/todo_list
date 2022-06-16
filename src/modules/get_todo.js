@@ -1,7 +1,6 @@
 import defaultTodos from './default_todo.js';
 
 class getTodos {
-
    static allTodos = () => {
      let todos = JSON.parse(localStorage.getItem('todos'));
 
