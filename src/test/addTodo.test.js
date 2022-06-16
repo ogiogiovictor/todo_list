@@ -32,8 +32,19 @@ describe('Add...', () => {
       const local = JSON.parse(localStorage.getItem('todos'));
       expect(local.length).toBe(2);
     });
-  
-  
+});
 
-    
+
+
+describe('Remove', () => {
+  test('removing first one', () => {
+    document.body.innerHTML = '<ul class="todoList"></ul>';
+    getTodos.allTodos();
+    const todos = JSON.parse(localStorage.getItem('todos'));
+    const { index } = todos[0];
+    const li = document.getElementById(index);
+    deleteTodo.removeFromLocalStorage(index)
+    expect(document.querySelectorAll('li').length).toBe(0);
+  });
+
 });
