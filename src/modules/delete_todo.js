@@ -2,8 +2,6 @@ import getTodos from './get_todo.js';
 import AddTodo from './add_todo.js';
 // import updateTodo from './update_todo.js';
 
-// const todoElement = document.querySelector('.todoList');
-
 class deleteTodo {
     static removeBookUI = (element) => {
       if (element.classList.contains('btn')) {
