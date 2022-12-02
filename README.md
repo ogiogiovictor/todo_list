@@ -28,6 +28,9 @@ Important: Once you have downloaded the code, run npm install, to install all de
 The Webpage is now deployed using github pages. See url link below:
 [live demo]( https://ogiogiovictor.github.io/todo_list/dist/)
 
+![image](https://user-images.githubusercontent.com/46789910/205255292-232ddea2-c42b-4539-bdc8-f042d1c06096.png)
+
+
 
 ## Authors
 👤 **Ogiogio Victor**
